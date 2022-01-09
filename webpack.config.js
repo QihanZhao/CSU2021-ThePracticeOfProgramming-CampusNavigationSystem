@@ -1,6 +1,6 @@
 const path = require('path');
 module.exports = {
-    mode:"production",
+    mode: "production",
     performance: { hints: false},
     entry: {
         index:'./src/app.tsx'
@@ -12,7 +12,9 @@ module.exports = {
     module: {
         rules: [{
             test: /\.tsx?$/,
-            use: 'ts-loader',
+            use: {
+                loader:'ts-loader'
+            },
             exclude: /node_modules/
         }]
     },

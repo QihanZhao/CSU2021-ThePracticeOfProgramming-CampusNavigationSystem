@@ -1,14 +1,14 @@
 {
-  "name": "huffman",
+  "name": "hanx",
   "version": "0.0.1",
-  "description": "it is a huffman tree application",
+  "description": "",
   "main": "app.tsx",
   "scripts": {
     "build": "set NODE_ENV=production && webpack",
     "serve": "webpack-dev-server || npm run watch:css",
     "watch:css": "npx tailwindcss -i ./src/style.css -o ./public/output.css --watch"
   },
-  "author": "rick lin",
+  "author": "hanx zhao",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.16.7",
@@ -17,6 +17,7 @@
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
     "babel-loader": "^8.2.3",
+    "json-loader": "^0.5.7",
     "tailwindcss": "^3.0.12",
     "ts-loader": "^9.2.6",
     "typescript": "^4.5.4",
@@ -25,6 +26,7 @@
   },
   "keywords": [],
   "dependencies": {
+    "@antv/g6": "^4.5.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "webpack-cli": "^4.9.1"

@@ -1,0 +1,132 @@
+{
+    "nodes":{
+        "node1": {
+            "imgURL": "https://img0.baidu.com/it/u=3402506614,1472653649&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=281",
+            "name": "Tennis Court",
+            "intro": "Students enjoy their lives there",
+            "index": "1"
+        },
+        "node2": {
+            "imgURL": "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fn.sinaimg.cn%2Fsinakd20112%2F199%2Fw1080h719%2F20210510%2Fcae8-kpuunnc9435561.jpg&refer=http%3A%2F%2Fn.sinaimg.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1644307575&t=43bddd547a369839e3001634b0a2d1ad",
+            "name": "CSU Statium",
+            "intro": "The appearance of the stadium is novel and the whole is geometrically shaped. The frame structure system is adopted and the roof is a large-span steel truss structure, in which the main span of the steel truss of the gymnasium is 92.1 meters, which is the largest in Hunan stadiums.",
+            "index": "2"
+        },
+        "node3": {
+            "imgURL": "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fdaqinlvye.cn%2FUSUpload%2Fimage%2F20140701%2F20140701114569516951.jpg&refer=http%3A%2F%2Fdaqinlvye.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1644308141&t=2310f0e6ae7137bd665d52c6a1cf33df",
+            "name": "CSU LAR Institute",
+            "intro": "The Light Alloy Research Institute of Central South University is a secondary research and teaching institution under Central South University, which focuses on scientific research.",
+            "index": "3"
+        },
+        "node4": {
+            "imgURL": "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fphoto.tuchong.com%2F1328157%2Ff%2F29351390.jpg&refer=http%3A%2F%2Fphoto.tuchong.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1644308337&t=de94248992ae889a0675415ce90b8ce0",
+            "name": "Languages College",
+            "intro": "With a history of 49 years, the College of Foreign Languages of Central South University was established from the former College of Foreign Languages of Changsha Railway College, College of Foreign Languages of Central South University of Technology and Foreign Language Department of Hunan Medical University.",
+            "index": "4"
+        },
+        "node5": {
+            "imgURL": "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20161008%2F719ccaab69184af78a64ea211417fd67_th.jpeg&refer=http%3A%2F%2Fimg.mp.itc.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1644308610&t=17ce83d3c90d743e368d578494dd94b7",
+            "name": "Chalco Technology Building",
+            "intro": "Chinalco Group is an important state-owned backbone enterprise directly managed by the central government, mainly engaged in mineral resources development, non-ferrous metal smelting and processing, related trade and engineering services, etc.",
+            "index": "5"
+        },
+        "node6": {
+            "imgURL": "https://pics7.baidu.com/feed/b812c8fcc3cec3fd3c46f600395c6c37869427ac.jpeg?token=5cd2fc07be4eac9d299c098ff88f601d",
+            "name": "Teaching Block D",
+            "intro": "It is the most hi-tech building in CSU",
+            "index": "6"
+        },
+        "node7":{
+            "imgURL":"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.ji-qi.com%2F3%2F2021%2F0228%2F20210228010328898.jpg&refer=http%3A%2F%2Fimg.ji-qi.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1644301842&t=e9c30215ff3a5ad6f7b8a9420a803a95",
+            "name": "CSU Library",
+            "intro": "The library of Central South University was formed in July 2000 by the merger of the library of the former Central South University of Technology, the library of the former Hunan Medical University and the library of the former Changsha Railway Institute with the restructuring of the university.",
+            "index": "7"
+        },
+        "node8": {
+            "imgURL": "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fahaimg.work360.cn%2Fup_files%2Fjingquzi%2F2019-08-21%2Fthumb_800_480_f1d896025ea0776.jpg&refer=http%3A%2F%2Fahaimg.work360.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1644301909&t=a57355e0900a29c5b3dea95d18ddf73b",
+            "name": "Arts College",
+            "intro": "A new type of college that integrates teaching and research, design practice and art performance, adhering to the concept of big art, big design and big creativity",
+            "index": "8"
+        },
+        "node9": {
+            "imgURL": "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg1.artimg.net%2F202007%2FUSPHPZpveyoFyfcTZgQJCMYlnruo5jUdVfg0i2me.jpg&refer=http%3A%2F%2Fimg1.artimg.net&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1644309362&t=7c5925c0d0f500a660018c0345a19184",
+            "name": "Hunan Art Museum",
+            "intro": "Hunan Art Museum is a new business card for the construction of Hunan's strong cultural province, and is a public welfare institution under the Hunan Provincial Federation of Literary and Art Circles.",
+            "index": "9"
+        },
+        "node10": {
+            "imgURL": "https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20190605%2F8e97de3b6cf34abba0d62e7fa50b4a5d.jpeg&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1644309531&t=2ced94f46f042b98ddc10dceb9a33824",
+            "name": "New Campus Gate",
+            "intro": "It is adjacent to Xiangjiang River",
+            "index": "10"
+        }
+    },
+    "edges":[
+        {
+            "source":"node1",
+            "target":"node9",
+            "weight":2000
+        },
+        {
+            "source": "node1",
+            "target": "node2",
+            "weight": 280
+        },
+        {
+            "source": "node2",
+            "target": "node3",
+            "weight": 370
+        },
+        {
+            "source": "node3",
+            "target": "node4",
+            "weight": 690
+        },
+        {
+            "source": "node3",
+            "target": "node7",
+            "weight": 1000
+        },
+        {
+            "source": "node3",
+            "target": "node5",
+            "weight": 790
+        },
+        {
+            "source": "node4",
+            "target": "node7",
+            "weight": 560
+        },
+        {
+            "source": "node6",
+            "target": "node7",
+            "weight": 320
+        },
+        {
+            "source": "node5",
+            "target": "node6",
+            "weight": 170
+        },
+        {
+            "source": "node5",
+            "target": "node8",
+            "weight": 640
+        },
+        {
+            "source": "node7",
+            "target": "node10",
+            "weight": 710
+        },
+        {
+            "source": "node8",
+            "target": "node10",
+            "weight": 610
+        },
+        {
+            "source": "node9",
+            "target": "node10",
+            "weight": 410
+        }
+
+    ]
+}
