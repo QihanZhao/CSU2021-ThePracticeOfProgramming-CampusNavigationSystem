@@ -19,12 +19,12 @@ module.exports = {
             exclude: /node_modules/
         }]
     },
-    // plugins: [
-    //     new webpack.DllReferencePlugin({
-    //       context: __dirname,
-    //       manifest: require('./Resource/Vendor/Vendor_manifest.json'),
-    //     })
-    // ],
+    plugins: [
+        // new webpack.DllReferencePlugin({
+        //   context: __dirname,
+        //   manifest: require('./Resource/Vendor/Vendor_manifest.json'),
+        // })
+    ],
     resolve: {
         extensions: ['.tsx','.ts','.js']
     },

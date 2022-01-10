@@ -6,7 +6,8 @@ module.exports = {
       'react',
       'react-dom',
       '@antv/l7',
-      '@antv/g6'
+      '@antv/g6',
+      'lodash'
     ],
   },
   output: {
