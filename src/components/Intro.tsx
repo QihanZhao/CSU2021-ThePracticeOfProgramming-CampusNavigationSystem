@@ -13,29 +13,21 @@ export default class Intro extends React.Component<IComponentProps>{
             );
         } else {
             return (
-                <div>
-                    
-                    <img src={graphFromJson["nodes"][tmp].imgURL} />
-
-                    <button
-                        className="name"
-                    >
-                        {graphFromJson["nodes"][tmp].name}
-                    </button>
-
-                    <button
-                        className="index"
-                    >
-                        {graphFromJson["nodes"][tmp].index}
-                    </button>
-
-                    <button
-                        className="intro"
-                    >
-                        {graphFromJson["nodes"][tmp].intro}
-                    </button>
+                <div className="overflow-hidden shadow-lg rounded-lg h-90 w-60 md:w-80 cursor-pointer m-auto">
+                    <a href="#" className="w-full block h-full">
+                        <img alt="blog photo" src={graphFromJson["nodes"][tmp].imgURL} className="max-h-40 w-full object-cover" />
+                        <div className="bg-white dark:bg-gray-800 w-full p-4">
+                            <p className="text-indigo-500 text-md font-medium">
+                            </p>
+                            <p className="text-gray-800 dark:text-white text-xl font-medium mb-2">
+                                {graphFromJson["nodes"][tmp].name}
+                            </p>
+                            <p className="text-gray-400 dark:text-gray-300 font-light text-md">
+                                {graphFromJson["nodes"][tmp].intro}
+                            </p>
+                        </div>
+                    </a>
                 </div>
-
             );
         }
         

@@ -9,12 +9,11 @@ export default class Switch extends React.Component<SwithchProps>{
 
     render() {
         return (
-            <button
+            <input
+                type="checkbox"
                 className="switch"
                 onClick={()=>this.props.operation()}
-            >
-                "it is a beautiful switch"
-            </button>
+            />
         )
     }
 }
