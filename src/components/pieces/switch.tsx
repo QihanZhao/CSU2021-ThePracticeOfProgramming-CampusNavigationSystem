@@ -14,7 +14,7 @@ export default class Switch extends React.Component<SwithchProps>{
                     路径查询
                 </span>
                 <div className="relative inline-block w-10 mr-2 align-middle select-none">
-                    <input type="checkbox" name="toggle" id="Blue" className="checked:bg-blue-500 outline-none focus:outline-none right-4 checked:right-0 duration-200 ease-in absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"
+                    <input type="checkbox" name="toggle" id="Blue" disabled={this.props.mintree} className="checked:bg-blue-500 outline-none focus:outline-none right-4 checked:right-0 duration-200 ease-in absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"
                         onChange={()=>this.props.operation()}
                     />
                     <label htmlFor="Blue" className="block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer">
