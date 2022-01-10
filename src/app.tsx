@@ -15,7 +15,7 @@ class App extends React.Component<null, IComponentProps>{
 
     constructor() {
         super(null);
-        this.state = { selected: ["node10"], switched: false, mintree: false, solutions:[[]], selectSolutionIndex:0 };
+        this.state = { selected: ["node10"], switched: false, mintree: false, solutions: [[]], selectSolutionIndex: 0 };
     }
     handleClick() {
         if (this.state.switched === false)
@@ -30,7 +30,7 @@ class App extends React.Component<null, IComponentProps>{
 
     handleChose(key: string) {
         const arr = this.state.selected;
-        if(arr.find(val=>val===key)!==undefined){
+        if (arr.find(val => val === key) !== undefined) {
             return;
         }
         if (arr.length === 0) {
@@ -76,7 +76,7 @@ class App extends React.Component<null, IComponentProps>{
                 {props.name}
             </button>)
         }
-        const buttons = Object.keys(graphFromJson["nodes"]).map(key => <Button key={key} name={graphFromJson["nodes"][key]["name"]} nodeKey={key}/>);
+        const buttons = Object.keys(graphFromJson["nodes"]).map(key => <Button key={key} name={graphFromJson["nodes"][key]["name"]} nodeKey={key} />);
         return (
             <div className="w-full h-full">
                 <div className="w-full h-20 fixed top-0">
@@ -84,21 +84,27 @@ class App extends React.Component<null, IComponentProps>{
                         {buttons}
                     </div>
                 </div>
-                <div className="flex flex-col gap-10">
-                    <div className="flex flex-row mt-20">
+                <div className="flex flex-col gap-10 mt-20">
+                    <div className="flex flex-row justify-items-end w-full h-auto">
+                        <div className="w-1/3 flex flex-col justify-items-center">
+                            <Intro selected={this.state.selected} switched={false}/>
+                        </div>
+                        <img src="./csu_map.png" className=" w-2/3  h-auto" />
+                    </div>
+                    <div className="flex flex-row">
                         {/* <RealMap selected={this.state.selected} switched={this.state.switched}/> */}
-                        <AbGraph selected={this.state.selected} switched={this.state.switched} mintree={this.state.mintree} setSolutions={(solutions)=>this.setState({solutions:Array.from(solutions)})}/>
+                        <AbGraph selected={this.state.selected} switched={this.state.switched} mintree={this.state.mintree} setSolutions={(solutions) => this.setState({ solutions: Array.from(solutions) })} />
                         <div className="flex flex-col gap-10">
                             <div className="mt-20">
                                 <Intro selected={this.state.selected} switched={this.state.switched} />
                             </div>
                             <div className="w-full h-1/10 flex flex-col gap-2">
                                 <div className="flex flex-row content-center justify-center">
-                                    <Switch selected={this.state.selected} switched={this.state.switched} mintree={this.state.mintree} operation={() => this.handleClick()}/>
+                                    <Switch selected={this.state.selected} switched={this.state.switched} mintree={this.state.mintree} operation={() => this.handleClick()} />
                                 </div>
                                 <div className="flex flex-row justify-center">
                                     <button type="button" className="w-30 h-10 py-2 px-4  bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg " onClick={() => this.handlePrim()}>
-                                        {this.state.mintree? "一般模式":"最小生成树"}
+                                        {this.state.mintree ? "一般模式" : "最小生成树"}
                                     </button>
                                 </div>
                             </div>
@@ -106,8 +112,8 @@ class App extends React.Component<null, IComponentProps>{
                     </div>
                     <div className="w-full flex flex-row">
                         {/* <RealMap selected={this.state.selected} switched={this.state.switched}/> */}
-                        <RealMap solution={this.state.solutions[this.state.selectSolutionIndex]}/>
-                        <PathSelect solutions={this.state.solutions} setIndex={(index)=>this.setState({selectSolutionIndex:index})}/>
+                        <RealMap solution={this.state.solutions[this.state.selectSolutionIndex]} />
+                        <PathSelect solutions={this.state.solutions} setIndex={(index) => this.setState({ selectSolutionIndex: index })} />
                     </div>
                 </div>
             </div>
