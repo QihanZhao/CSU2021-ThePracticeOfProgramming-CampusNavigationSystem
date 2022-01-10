@@ -15,7 +15,7 @@ class App extends React.Component<null, IComponentProps>{
 
     constructor() {
         super(null);
-        this.state = { selected: ["node10"], switched: false, mintree: false, selectSolutionIndex:0 };
+        this.state = { selected: ["node10"], switched: false, mintree: false, solutions:[[]], selectSolutionIndex:0 };
     }
     handleClick() {
         if (this.state.switched === false)
@@ -49,7 +49,7 @@ class App extends React.Component<null, IComponentProps>{
 
         arr.push(key)
         this.setState({
-            selected: arr
+            selected: Array.from(arr)
         })
     }
 
@@ -67,7 +67,6 @@ class App extends React.Component<null, IComponentProps>{
 
     render(): React.ReactNode {
         const Button = (props: { name: string, nodeKey: string }) => {
-            console.log("button>>>", props);
             return (<button type="button" className="flex-grow border text-base font-medium text-black bg-white hover:bg-gray-100 px-4 py-2"
                 onClick={() => this.handleChose(props.nodeKey)}
             >
@@ -75,7 +74,6 @@ class App extends React.Component<null, IComponentProps>{
             </button>)
         }
         const buttons = Object.keys(graphFromJson["nodes"]).map(key => <Button key={key} name={graphFromJson["nodes"][key]["name"]} nodeKey={key}/>);
-        console.log(buttons);
         return (
             <div className="w-full h-full">
                 <div className="w-full h-20 fixed top-0">
@@ -86,7 +84,7 @@ class App extends React.Component<null, IComponentProps>{
                 <div className="flex flex-col gap-10">
                     <div className="flex flex-row mt-20">
                         {/* <RealMap selected={this.state.selected} switched={this.state.switched}/> */}
-                        <AbGraph selected={this.state.selected} switched={this.state.switched} mintree={this.state.mintree} setSolutions={(solutions)=>this.setState({solutions:solutions})}/>
+                        <AbGraph selected={this.state.selected} switched={this.state.switched} mintree={this.state.mintree} setSolutions={(solutions)=>this.setState({solutions:Array.from(solutions)})}/>
                         <div className="flex flex-col gap-10">
                             <div className="mt-20">
                                 <Intro selected={this.state.selected} switched={this.state.switched} />

@@ -49,4 +49,4 @@ function dijstra(graph, src) {
     }
     return dist;
 }
-console.log(dijstra(graph, 0));
+// console.log(dijstra(graph, 0));

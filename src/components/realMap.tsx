@@ -90,7 +90,6 @@ export default React.memo(function Map(props: { solution: string[] }) {
       />
     )
   }
-  console.log("data>>>", fetchData([{ source: "node2", target: "node1" }, { source: "node2", target: "node3" }]));
   return (
     <>
       <MapboxScene
@@ -98,7 +97,7 @@ export default React.memo(function Map(props: { solution: string[] }) {
           center: [112.93636322021484, 28.15468707009379],
           pitch: 0,
           style: 'dark',
-          zoom: 10,
+          zoom: 20,
         }}
         style={{
           position: 'relative',
