@@ -14,7 +14,7 @@ class App extends React.Component<null, IComponentProps>{
 
     constructor() {
         super(null);
-        this.state = { selected: [], switched: false, mintree: false };
+        this.state = { selected: ["node10"], switched: false, mintree: false };
     }
     handleClick() {
         if (this.state.switched === false)
@@ -65,15 +65,15 @@ class App extends React.Component<null, IComponentProps>{
     }
 
     render(): React.ReactNode {
-        const Button =(props: { name: string })=>{
+        const Button = (props: { name: string, nodeKey: string }) => {
             console.log("button>>>", props);
             return (<button type="button" className="border text-base font-medium text-black bg-white hover:bg-gray-100 px-4 py-2"
-                onClick={() => this.handleChose(props.name)}
+                onClick={() => this.handleChose(props.nodeKey)}
             >
                 {props.name}
             </button>)
         }
-        const buttons = Object.keys(graphFromJson["nodes"]).map(key => <Button key={key} name={key}/>);
+        const buttons = Object.keys(graphFromJson["nodes"]).map(key => <Button key={key} name={graphFromJson["nodes"][key]["name"]} nodeKey={key}/>);
         console.log(buttons);
         return (
             <div className="flex flex-col w-full h-full">
