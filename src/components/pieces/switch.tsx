@@ -9,7 +9,7 @@ export default class Switch extends React.Component<SwithchProps>{
 
     render() {
         return (
-            <div className="mb-3">
+            <div className="mb-3 flex flex-row content-center justify-center">
                 <span className="text-gray-400 font-medium">
                     路径查询
                 </span>

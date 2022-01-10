@@ -76,18 +76,28 @@ class App extends React.Component<null, IComponentProps>{
         const buttons = Object.keys(graphFromJson["nodes"]).map(key => <Button key={key} name={graphFromJson["nodes"][key]["name"]} nodeKey={key}/>);
         console.log(buttons);
         return (
-            <div className="flex flex-col w-full h-full">
-                <div className="flex flex-row h-4/5">
-                    {/* <RealMap selected={this.state.selected} switched={this.state.switched}/> */}
-                    <AbGraph selected={this.state.selected} switched={this.state.switched} mintree={this.state.mintree} />
-                    <Intro selected={this.state.selected} switched={this.state.switched} />
-                </div>
-                <div className="w-full h-1/5 flex flex-row">
+            <div className="w-full h-full">
+                <div className="w-full h-20 fixed top-0">
                     <div className="flex flex-row items-center">
                         {buttons}
                     </div>
-                    <Switch selected={this.state.selected} switched={this.state.switched} operation={() => this.handleClick()} />
-                    <button onClick={() => this.handlePrim()}>"最小生成树"</button>
+                </div>
+                <div className="flex flex-row mt-20">
+                    {/* <RealMap selected={this.state.selected} switched={this.state.switched}/> */}
+                    <AbGraph selected={this.state.selected} switched={this.state.switched} mintree={this.state.mintree} />
+                    <div className="flex flex-col gap-10">
+                        <div className="mt-20">
+                            <Intro selected={this.state.selected} switched={this.state.switched} />
+                        </div>
+                        <div className="w-full h-1/10 flex flex-col gap-2">
+                            <div className="flex flex-row content-center justify-center">
+                                <Switch selected={this.state.selected} switched={this.state.switched} operation={() => this.handleClick()} />
+                            </div>
+                            <div className="flex flex-row justify-center">
+                                <button type="button" className="w-30 h-10 py-2 px-4  bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg " onClick={() => this.handlePrim()}>"最小生成树"</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         )
