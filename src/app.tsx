@@ -30,6 +30,9 @@ class App extends React.Component<null, IComponentProps>{
 
     handleChose(key: string) {
         const arr = this.state.selected;
+        if(arr.find(val=>val===key)!==undefined){
+            return;
+        }
         if (arr.length === 0) {
 
         } else if (arr.length === 1) {

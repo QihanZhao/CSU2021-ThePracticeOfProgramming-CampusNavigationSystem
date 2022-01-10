@@ -75,6 +75,9 @@ export default React.memo(function Map(props: { solution: string[] }) {
         source={{
           data: data
         }}
+        options={{
+          autoFit:true
+        }}
         size={{
           values: 1,
         }}
