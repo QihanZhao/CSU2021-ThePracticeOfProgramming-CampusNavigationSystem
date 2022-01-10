@@ -11,15 +11,15 @@ function convertJSONtoG6(graphFromJson: any,selected:string[]) {
         }
         res.label = graphFromJson["nodes"][nodesKey[i]].name;
         nodesEle[i] = res;
-
     }
-   
 
     let edgesEle = new Array();
     for (let i = 0; i < graphFromJson["edges"].length; i++) {
         edgesEle[i] = {
             source: graphFromJson["edges"][i]["source"],
             target: graphFromJson["edges"][i]["target"],
+            weight: graphFromJson["edges"][i]["weight"],
+            style: undefined
         };
     }
     return {

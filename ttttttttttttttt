@@ -65,17 +65,28 @@ class App extends React.Component<null, IComponentProps>{
     }
 
     render(): React.ReactNode {
-        const buttons = Object.keys(graphFromJson["nodes"]).map(key => <button onClick={() => this.handleChose(key)}>{key}</button>);
+        const Button = (props:{key:string,}) => {
+            return (<button type="button" className=" w-10 h-10 border text-base font-medium text-black bg-white hover:bg-gray-100 px-4 py-2"
+                        onClick={()=>this.handleChose(props.key)}
+                    >
+                       "test test test"
+                    </button>)
+        }
+        const buttons = Object.keys(graphFromJson["nodes"]).map(key => <Button key={key}/>);
         return (
-            <div className="flex flex-col">
-                <div className="flex flex-row">
+            <div className="flex flex-col w-full h-full">
+                <div className="flex flex-row h-4/5">
                     {/* <RealMap selected={this.state.selected} switched={this.state.switched}/> */}
                     <AbGraph selected={this.state.selected} switched={this.state.switched} mintree={this.state.mintree}/>
                     <Intro selected={this.state.selected} switched={this.state.switched}/>
                 </div>
-                {buttons}
-                <Switch selected={this.state.selected} switched={this.state.switched} operation={() => this.handleClick()} />
-                <button onClick={() => this.handlePrim()}>"最小生成树"</button>
+                <div className="w-full h-1/5 flex flex-row">
+                <div className="flex flex-row items-center">
+                    {buttons}
+                </div>
+                <Switch selected={this.state.selected} switched={this.state.switched} operation={() => this.handleClick()} />   
+                    <button onClick={() => this.handlePrim()}>"最小生成树"</button>
+                </div>
             </div>
         )
     }
