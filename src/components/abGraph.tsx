@@ -6,8 +6,10 @@ import { convertJSONtoG6 } from "../utils/convertToG6";
 import { msTree } from "../utils/prim";
 
 const graphFromJson = require("../static/graph.json");
-
-export default class AbGraph extends React.Component<IComponentProps>{
+interface IAbGraphProps extends IComponentProps{
+    setSolutions:(solutions:Array<string[]>)=>void
+}
+export default class AbGraph extends React.Component<IAbGraphProps>{
     private graph: any = null;
     componentDidMount() {
         this.graph = new G6.Graph({
@@ -26,6 +28,7 @@ export default class AbGraph extends React.Component<IComponentProps>{
     componentDidUpdate() {
         this.graph.clear();
         const temp = convertJSONtoG6(graphFromJson, this.props.selected);
+        const allPath = findAllPath(temp,this.props.selected[0],this.props.selected[1],false);
         if (this.props.mintree === false) {
             if (this.props.selected.length === 2) {
 
@@ -48,7 +51,7 @@ export default class AbGraph extends React.Component<IComponentProps>{
                 temp["nodes"][i]["style"] = undefined;
             }
         }
-        console.log("temp>>>",temp);
+        this.props.setSolutions(allPath);
         this.graph.data(temp);
         this.graph.render();
     }

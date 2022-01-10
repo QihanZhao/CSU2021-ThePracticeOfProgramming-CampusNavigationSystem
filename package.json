@@ -29,6 +29,7 @@
     "@antv/g6": "^4.5.1",
     "@antv/l7": "^2.6.33",
     "@antv/l7-react": "^2.3.9",
+    "@types/geojson": "^7946.0.8",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "webpack-cli": "^4.9.1"

@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 module.exports = {
     mode: "production",
-    // performance: { hints: false},
+    performance: { hints: false},
     entry: {
         index:'./src/app.tsx'
     },
