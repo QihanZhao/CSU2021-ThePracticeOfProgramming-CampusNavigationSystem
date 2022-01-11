@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDom from "react-dom";
-import Point from "./components/pieces/point";
 import Switch from "./components/pieces/switch";
 import AbGraph from "./components/abGraph";
 import Intro from "./components/Intro";
